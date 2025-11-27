@@ -90,6 +90,13 @@ int PremisseEstVide(Regle r) {
     return 1;
 }
 
+int ConclusionSeule(Regle r) {
+    if (r != NULL && r->next == NULL ) {
+        return 1;
+    }
+    return 0;
+}
+
 char* PremierPremisse(Regle r) {
     if (PremisseEstVide(r) == 0) {
         return r->proposition;

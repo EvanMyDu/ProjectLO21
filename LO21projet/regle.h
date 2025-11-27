@@ -13,6 +13,7 @@ Regle AjoutConclusion(Regle r, char *conclusion);
 int TestPremisse(Regle r, char *proposition);
 Regle SupprimeProposition(Regle r, char *proposition);
 int PremisseEstVide(Regle r);
+int ConclusionSeule(Regle r);
 char* PremierPremisse(Regle r);
 char* Conclusion(Regle r);
 #endif //UNTITLED1_REGLE_H
