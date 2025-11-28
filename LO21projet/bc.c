@@ -7,37 +7,37 @@
 
 
 typedef struct ElementBC {
-        Regle regle;
-        struct ElementBC *next;
+        Regle regle; //Chaque élement de la BC contient une règle
+        struct ElementBC *next; //Pointeur Donnant Sur le prochain element de la BC (Liste chainée)
 }ElementBC;
 
-typedef ElementBC *BC;
+typedef ElementBC *BC; //Choix : La BC en elle même est un ElementBC
 
 BC CreerBaseVide() {
         return NULL;
 }
 
 BC AjoutRegle(BC bc, Regle r) {
-        ElementBC *newel = malloc(sizeof(ElementBC));
+        ElementBC *newel = malloc(sizeof(ElementBC)); //On associe de la mémoire pour le nouveau élement de BC
         newel->regle = r;
         newel->next = NULL;
-        if (bc == NULL) {
+        if (bc == NULL) { //Cas où la BC est vide
                 bc = newel;
 
                 return bc;
         }
-        ElementBC *p = bc;
-        while (p->next != NULL) {
-                p = p->next;
+        ElementBC *p = bc; //On créé un nouvel pointeur pour parcourir la BC sans la modifier
+        while (p->next != NULL) { // On s'arrête au dernier élementBC
+                p = p->next; //Pour avancer dans la BC
         }
-        p->next = newel;
+        p->next = newel; //On ajoute le nouvel ElementBC
         return bc;
 }
 
 
-Regle RegleBase(BC bc) {
-        if (bc == NULL) {
+Regle RegleBase(BC bc) { //On retourne la premiere règle de la BC
+        if (bc == NULL) {//Cas où la BC est vide
                 return NULL;
         }
-        return bc->regle;
+        return bc->regle; //on renvoie donc la premiere règle de la BC
 }
