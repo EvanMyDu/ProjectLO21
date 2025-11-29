@@ -6,24 +6,18 @@
 #include "bc.h"
 
 
-typedef struct ElementBC {
-        Regle regle; //Chaque élement de la BC contient une règle
-        struct ElementBC *next; //Pointeur Donnant Sur le prochain element de la BC (Liste chainée)
-}ElementBC;
 
-typedef ElementBC *BC; //Choix : La BC en elle même est un ElementBC
 
 BC CreerBaseVide() {
         return NULL;
 }
 
-BC AjoutRegle(BC bc, Regle r) {
+BC AjoutRegle(BC bc, Regle *r) {
         ElementBC *newel = malloc(sizeof(ElementBC)); //On associe de la mémoire pour le nouveau élement de BC
         newel->regle = r;
         newel->next = NULL;
         if (bc == NULL) { //Cas où la BC est vide
                 bc = newel;
-
                 return bc;
         }
         ElementBC *p = bc; //On créé un nouvel pointeur pour parcourir la BC sans la modifier
@@ -35,7 +29,7 @@ BC AjoutRegle(BC bc, Regle r) {
 }
 
 
-Regle RegleBase(BC bc) { //On retourne la premiere règle de la BC
+Regle* RegleBase(BC bc) { //On retourne la premiere règle de la BC
         if (bc == NULL) {//Cas où la BC est vide
                 return NULL;
         }

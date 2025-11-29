@@ -10,12 +10,7 @@
 
 //Convention : SI IL Y A QU'UN SEUL ELEMENT DANS UNE REGLE IL S'AGIT DE LA CONCLUSION
 
-typedef struct ElementRegle {
-    struct ElementRegle *next; //Pointeur Donnant Sur le prochain element de la règle (Liste chainée)
-     char *proposition; //Contenu de la proposition
-}ElementRegle;
 
-typedef ElementRegle *Regle; //Choix : La Règle en elle même est un ElementRegle
 
 Regle CreerRegleVide() {
     return NULL;
