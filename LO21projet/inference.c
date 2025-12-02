@@ -60,11 +60,11 @@ void AfficherFaits(ListeFaits listeFaits) {
     printf("\n");
 }
 
-int PremissesVerifier(Regle r, ListeFaits listeFaits) {
+int PremissesVerifier(Regle *r, ListeFaits listeFaits) {
     if (listeFaits == NULL) return 0; //verifie que la liste de faits n'est pas vide
     if ((r->premisse == NULL) && (r->conclusion == NULL)) return 0; //verifie que la règle existe
 
-    ElementRegle *p = r;
+    ElementRegle *p = r->premisse;
     while (p->next != NULL) { //on parcours jusqu'à la conclusion
         if (FaitAppartient(listeFaits, p->proposition) == 0) return 0; //la premisse n'est pas verifier
         p = p->next;

@@ -22,7 +22,7 @@ int FaitAppartient(ListeFaits f, char *fait);
 void AfficherFaits(ListeFaits f);
 
 // Vérification des prémisses
-int PremissesVerifier(Regle r, ListeFaits listeFaits);
+int PremissesVerifier(Regle *r, ListeFaits listeFaits);
 
 // Moteur d'inférence
 ListeFaits moteur_inferences(BC BaseConnaissance, ListeFaits BaseFaits);
