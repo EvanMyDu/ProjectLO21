@@ -62,7 +62,7 @@ void AfficherFaits(ListeFaits listeFaits) {
 
 int PremissesVerifier(Regle r, ListeFaits listeFaits) {
     if (listeFaits == NULL) return 0; //verifie que la liste de faits n'est pas vide
-    if (r == NULL || PremisseEstVide(r)) return 0; //verifie que la règle existe ou qu'elle ne contient pas qu'un seul élément
+    if ((r->premisse == NULL) && (r->conclusion == NULL)) return 0; //verifie que la règle existe
 
     ElementRegle *p = r;
     while (p->next != NULL) { //on parcours jusqu'à la conclusion
@@ -84,7 +84,7 @@ ListeFaits moteur_inferences(BC BaseConnaissance, ListeFaits BaseFaits) {
 
         while (courant != NULL) {
 
-            Regle regle = courant->regle;
+            Regle *regle = courant->regle;
             char *conclusion = Conclusion(regle); // On stocke la conclusion pour éviter de rappeler la fonction plusieurs fois
 
             if (ConclusionSeule(regle) == 1) { // Cas où la règle ne contient qu'une seule proposition (la conclusion)
