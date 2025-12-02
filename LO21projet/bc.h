@@ -14,6 +14,7 @@ typedef struct ElementBC {
 typedef ElementBC *BC; //Choix : La BC en elle même est un ElementBC
 
 BC CreerBaseVide();
+BC AjoutRegle(BC bc, Regle *r);
 Regle* RegleBase(BC bc);
 
 

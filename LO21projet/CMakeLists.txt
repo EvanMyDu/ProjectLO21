@@ -5,9 +5,7 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(untitled1 main.c
         regle.c
-        regle.h
         bc.c
-        bc.h
         inference.c
-        inference.h
+
 )
