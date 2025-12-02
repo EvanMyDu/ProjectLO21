@@ -47,11 +47,11 @@ ListeFaits AjouterFait(ListeFaits f, char *fait) {
     return f;
 }
 
-void afficher_faits(ListeFaits listeFaits) {
+void AfficherFaits(ListeFaits listeFaits) {
     printf("Faits : ");
     ElementFait *f = listeFaits;
     while (f != NULL) {
-        printf("%s\n", f->fait);
+        printf("%s", f->fait);
         f = f->next;
         if (f != NULL) {
             printf(", ");
@@ -77,40 +77,41 @@ ListeFaits moteur_inferences(BC BaseConnaissance, ListeFaits BaseFaits) {
 
     while(nouveau_fait != 0) {
 
-    nouveau_fait = 0;
-    BC courant = BaseConnaissance;
+        nouveau_fait = 0;
+        BC courant = BaseConnaissance;
 
-    if (courant == NULL || BaseFaits == NULL) return BaseFaits;
+        if (courant == NULL || BaseFaits == NULL) return BaseFaits;
 
         while (courant != NULL) {
 
             Regle regle = courant->regle;
+            char *conclusion = Conclusion(regle); // On stocke la conclusion pour éviter de rappeler la fonction plusieurs fois
 
-                if (ConclusionSeule(regle) == 1) {
+            if (ConclusionSeule(regle) == 1) { // Cas où la règle ne contient qu'une seule proposition (la conclusion)
 
-                    if (FaitAppartient(BaseFaits, Conclusion(regle)) == 0) {
+                if (FaitAppartient(BaseFaits, conclusion) == 0) { // Si la conclusion n'est pas déjà dans les faits
 
-                        BaseFaits = AjouterFait(BaseFaits, Conclusion(regle)); //on ajoute la conclusion de cette règle à la base de faits
-                        printf("Nouveau fait : %s \n", Conclusion(regle));
-                        nouveau_fait = 1;
-
-                    }
-
-                }
-
-                else if (PremissesVerifier(regle, BaseFaits)) { //Si la règle de la base de connaissance a toute ses premisses dans la base de fait
-
-                    if (FaitAppartient(BaseFaits, Conclusion(regle)) == 0) {
-
-                        BaseFaits = AjouterFait(BaseFaits, Conclusion(regle)); //on ajoute la conclusion de cette règle à la base de faits
-                        printf("Nouveau fait : %s \n", Conclusion(regle));
-                        nouveau_fait = 1;
-
-                    }
+                    BaseFaits = AjouterFait(BaseFaits, conclusion); //on ajoute la conclusion de cette règle à la base de faits
+                    printf("Nouveau fait (conclusion seule) : %s \n", conclusion);
+                    nouveau_fait = 1;
 
                 }
 
-            courant = courant->next;
+            }
+
+            else if (PremissesVerifier(regle, BaseFaits)) { //Si la règle de la base de connaissance a toute ses premisses dans la base de fait
+
+                if (FaitAppartient(BaseFaits, conclusion) == 0) { // Si la conclusion n'est pas déjà dans les faits
+
+                    BaseFaits = AjouterFait(BaseFaits, conclusion); //on ajoute la conclusion de cette règle à la base de faits
+                    printf("Nouveau fait : %s \n", conclusion);
+                    nouveau_fait = 1;
+
+                }
+
+            }
+
+            courant = courant->next; // On passe à la règle suivante dans la base de connaissances
 
         }
     }
@@ -118,4 +119,3 @@ ListeFaits moteur_inferences(BC BaseConnaissance, ListeFaits BaseFaits) {
     return BaseFaits;
 
 }
-
