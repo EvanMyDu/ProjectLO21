@@ -1,0 +1,6 @@
+# ninja log v6
+2	78	7863954453523355	CMakeFiles/untitled1.dir/main.c.obj	3d6efa384ecdbf7d
+8	103	7863954453588931	CMakeFiles/untitled1.dir/bc.c.obj	b79aeb1754ef2f2f
+5	151	7863954453553539	CMakeFiles/untitled1.dir/regle.c.obj	f798cdf43057269d
+11	153	7863954453614344	CMakeFiles/untitled1.dir/inference.c.obj	335ab18e81fa6ffc
+153	251	7863954455025577	untitled1.exe	82098e94eaad5bf1
