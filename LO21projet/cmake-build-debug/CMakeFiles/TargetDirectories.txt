@@ -1,3 +1,3 @@
-C:/Users/Myotte-Duquet/Documents/ProjectLO21/LO21projet/cmake-build-debug/CMakeFiles/untitled1.dir
-C:/Users/Myotte-Duquet/Documents/ProjectLO21/LO21projet/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Myotte-Duquet/Documents/ProjectLO21/LO21projet/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Myotte-Duquet/Desktop/lo21/ProjectLO21/LO21projet/cmake-build-debug/CMakeFiles/untitled1.dir
+C:/Users/Myotte-Duquet/Desktop/lo21/ProjectLO21/LO21projet/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Myotte-Duquet/Desktop/lo21/ProjectLO21/LO21projet/cmake-build-debug/CMakeFiles/rebuild_cache.dir

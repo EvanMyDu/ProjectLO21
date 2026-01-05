@@ -1,0 +1,22 @@
+CMakeFiles/untitled1.dir/bc.c.obj: \
+ C:\Users\Myotte-Duquet\Desktop\lo21\ProjectLO21\LO21projet\bc.c \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/stdlib.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/_mingw.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/vadefs.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+ C:/winlibs/mingw64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h \
+ C:/winlibs/mingw64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/limits.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/malloc.h \
+ C:/winlibs/mingw64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/errno.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/string.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ C:\Users\Myotte-Duquet\Desktop\lo21\ProjectLO21\LO21projet\bc.h \
+ C:\Users\Myotte-Duquet\Desktop\lo21\ProjectLO21\LO21projet\regle.h

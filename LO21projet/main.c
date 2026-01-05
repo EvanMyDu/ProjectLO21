@@ -47,5 +47,11 @@ int main() {
    printf("\nBase de faits finale: ");
    AfficherFaits(BF);
 
+   printf("\nRelancement du moteur...\n"); //Test pour prouver que les faits ne sont pas ajoutés une deuxieme fois
+   BF = moteur_inferences(BC1, BF);
+
+   printf("\nBase de faits finale: "); //On peut voir qu'il n'y a pas de faits en double
+   AfficherFaits(BF);
+
    return 0;
 }

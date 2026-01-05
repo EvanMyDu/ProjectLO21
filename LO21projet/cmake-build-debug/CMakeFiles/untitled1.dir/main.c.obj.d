@@ -1,0 +1,16 @@
+CMakeFiles/untitled1.dir/main.c.obj: \
+ C:\Users\Myotte-Duquet\Desktop\lo21\ProjectLO21\LO21projet\main.c \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/stdio.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/_mingw.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/vadefs.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
+ C:/winlibs/mingw64/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+ C:\Users\Myotte-Duquet\Desktop\lo21\ProjectLO21\LO21projet\regle.h \
+ C:\Users\Myotte-Duquet\Desktop\lo21\ProjectLO21\LO21projet\bc.h \
+ C:\Users\Myotte-Duquet\Desktop\lo21\ProjectLO21\LO21projet\inference.h
